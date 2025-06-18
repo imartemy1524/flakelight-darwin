@@ -14,7 +14,7 @@
   };
 
   outputs = { flakelight, nix-darwin, ... }@inputs: flakelight ./. {
-    imports = [ flakelight.flakelightModules.flakelightModule ];
+    imports = [ flakelight.flakelightModules.default ];
     flakelightModule = { lib, ... }: {
       imports = [
         ./flakelight-darwin/darwinModules.nix
